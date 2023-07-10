@@ -1,0 +1,106 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (C:\Users\lubom\Desktop\kakhackmaster\output\intermediates\) contains files shared from another project (kakhack.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  allockeyvaluesmemory.cpp
+  dispatchusermessage.cpp
+  onscreensizechanged.cpp
+  senddatagram.cpp
+  sequence.cpp
+  settingschattext.cpp
+  showalert.cpp
+  createmove.cpp
+  drawmodelexecute.cpp
+  endscene.cpp
+  framestagenotify.cpp
+  getplayermoney.cpp
+  getviewmodelfov.cpp
+  levelinitpostentity.cpp
+  levelinitpreentity.cpp
+  levelshutdown.cpp
+  listleavesinbox.cpp
+  overrideview.cpp
+  paint.cpp
+  painttraverse.cpp
+  Compiling...
+  dopostscreenspaceeffects.cpp
+  reset.cpp
+  staticpropinit.cpp
+C:\Users\lubom\Desktop\kakhackmaster\cheat\core\functions\staticpropinit.cpp(6,51): warning C4244: '=': conversion from '_Ty' to 'uint8_t', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\lubom\Desktop\kakhackmaster\cheat\core\functions\staticpropinit.cpp(7,51): warning C4244: '=': conversion from '_Ty' to 'uint8_t', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\lubom\Desktop\kakhackmaster\cheat\core\functions\staticpropinit.cpp(8,51): warning C4244: '=': conversion from '_Ty' to 'uint8_t', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\lubom\Desktop\kakhackmaster\cheat\core\functions\staticpropinit.cpp(9,51): warning C4244: '=': conversion from '_Ty' to 'uint8_t', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  globals.cpp
+  hooks.cpp
+  interfaces.cpp
+  ui.cpp
+  netvar.cpp
+  misc.cpp
+  visuals.cpp
+  main.cpp
+  config.cpp
+  entities.cpp
+  events.cpp
+  skins.cpp
+  memory.cpp
+  render.cpp
+  entity.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  Compiling...
+  imgui_draw.cpp
+  imgui_freetype.cpp
+  imgui_impl_dx9.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\lubom\Desktop\kakhackmaster\cheat\sdk\entity\entity.cpp(10): warning C4172: returning address of local variable or temporary: matrix
+  All 4623 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+freetype.lib(autofit.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(autofit.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftbase.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftbase.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftbitmap.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftbitmap.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftinit.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftinit.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftsynth.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftsynth.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(bdf.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(bdf.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(cff.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(cff.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(type1cid.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(type1cid.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftgzip.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftgzip.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftlzw.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftlzw.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(pcf.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(pcf.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(pfr.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(pfr.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(psaux.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(psaux.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(pshinter.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(pshinter.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(psmodule.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(psmodule.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(raster.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(raster.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(sfnt.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(sfnt.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(smooth.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(smooth.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(sdf.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(sdf.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(truetype.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(truetype.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(type1.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(type1.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(type42.obj) : warning LNK4099: PDB '' was not found with 'freetype.lib(type42.obj)' or at ''; linking object as if no debug info
+freetype.lib(winfnt.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(winfnt.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftdebug.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftdebug.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+freetype.lib(ftsystem.obj) : warning LNK4099: PDB 'freetype.pdb' was not found with 'freetype.lib(ftsystem.obj)' or at 'C:\Users\lubom\Desktop\kakhackmaster\output\freetype.pdb'; linking object as if no debug info
+  kakhack.vcxproj -> C:\Users\lubom\Desktop\kakhackmaster\output\WhiteTail Main.dll
