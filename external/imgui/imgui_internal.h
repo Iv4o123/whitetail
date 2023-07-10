@@ -304,63 +304,6 @@ namespace ImStb
 // - Helper: ImChunkStream<>
 //-----------------------------------------------------------------------------
 
-#define M_PI       3.14159265358979323846   // pi
-#include <algorithm>
-
-__forceinline double InOutCirc(const double t) {
-    if (t < 0.5) {
-        return (1 - sqrt(1 - 2 * t)) * 0.5;
-    }
-    else {
-        return (1 + sqrt(2 * t - 1)) * 0.5;
-    }
-}
-
-__forceinline double InOutQuart(double t) {
-    if (t < 0.5) {
-        t *= t;
-        return 8 * t * t;
-    }
-    else {
-        t = (--t) * t;
-        return 1 - 8 * t * t;
-    }
-}
-
-__forceinline double InOutBack(double t) {
-    if (t < 0.5) {
-        return t * t * (7 * t - 2.5) * 2;
-    }
-    else {
-        return 1 + (--t) * t * 2 * (7 * t + 2.5);
-    }
-}
-
-__forceinline double InOutElastic(const double t) {
-    double t2;
-    if (t < 0.45) {
-        t2 = t * t;
-        return 8 * t2 * t2 * sin(t * M_PI * 9);
-    }
-    else if (t < 0.55) {
-        return 0.5 + 0.75 * sin(t * M_PI * 4);
-    }
-    else {
-        t2 = (t - 1) * (t - 1);
-        return 1 - 8 * t2 * t2 * sin(t * M_PI * 9);
-    }
-}
-
-__forceinline double InOutBounce(const double t) {
-    if (t < 0.5) {
-        return 8 * pow(2, 8 * (t - 1)) * abs(sin(t * M_PI * 7));
-    }
-    else {
-        return 1 - 8 * pow(2, -8 * t) * abs(sin(t * M_PI * 7));
-    }
-}
-
-
 // Helpers: Hashing
 IMGUI_API ImGuiID       ImHashData(const void* data, size_t data_size, ImU32 seed = 0);
 IMGUI_API ImGuiID       ImHashStr(const char* data, size_t data_size = 0, ImU32 seed = 0);

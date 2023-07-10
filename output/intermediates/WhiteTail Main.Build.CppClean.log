@@ -1,66 +1,66 @@
-c:\users\juji\desktop\whitetail\output\intermediates\vc142.pdb
-c:\users\juji\desktop\whitetail\output\intermediates\paint.obj
-c:\users\juji\desktop\whitetail\output\intermediates\overrideview.obj
-c:\users\juji\desktop\whitetail\output\intermediates\listleavesinbox.obj
-c:\users\juji\desktop\whitetail\output\intermediates\levelshutdown.obj
-c:\users\juji\desktop\whitetail\output\intermediates\levelinitpreentity.obj
-c:\users\juji\desktop\whitetail\output\intermediates\levelinitpostentity.obj
-c:\users\juji\desktop\whitetail\output\intermediates\getviewmodelfov.obj
-c:\users\juji\desktop\whitetail\output\intermediates\getplayermoney.obj
-c:\users\juji\desktop\whitetail\output\intermediates\framestagenotify.obj
-c:\users\juji\desktop\whitetail\output\intermediates\endscene.obj
-c:\users\juji\desktop\whitetail\output\intermediates\drawmodelexecute.obj
-c:\users\juji\desktop\whitetail\output\intermediates\createmove.obj
-c:\users\juji\desktop\whitetail\output\intermediates\showalert.obj
-c:\users\juji\desktop\whitetail\output\intermediates\settingschattext.obj
-c:\users\juji\desktop\whitetail\output\intermediates\sequence.obj
-c:\users\juji\desktop\whitetail\output\intermediates\senddatagram.obj
-c:\users\juji\desktop\whitetail\output\intermediates\onscreensizechanged.obj
-c:\users\juji\desktop\whitetail\output\intermediates\dispatchusermessage.obj
-c:\users\juji\desktop\whitetail\output\intermediates\allockeyvaluesmemory.obj
-c:\users\juji\desktop\whitetail\output\intermediates\etc_elements.obj
-c:\users\juji\desktop\whitetail\output\intermediates\entity.obj
-c:\users\juji\desktop\whitetail\output\intermediates\render.obj
-c:\users\juji\desktop\whitetail\output\intermediates\memory.obj
-c:\users\juji\desktop\whitetail\output\intermediates\skins.obj
-c:\users\juji\desktop\whitetail\output\intermediates\events.obj
-c:\users\juji\desktop\whitetail\output\intermediates\entities.obj
-c:\users\juji\desktop\whitetail\output\intermediates\config.obj
-c:\users\juji\desktop\whitetail\output\intermediates\main.obj
-c:\users\juji\desktop\whitetail\output\intermediates\visuals.obj
-c:\users\juji\desktop\whitetail\output\intermediates\misc.obj
-c:\users\juji\desktop\whitetail\output\intermediates\netvar.obj
-c:\users\juji\desktop\whitetail\output\intermediates\ui.obj
-c:\users\juji\desktop\whitetail\output\intermediates\nav_elements.obj
-c:\users\juji\desktop\whitetail\output\intermediates\interfaces.obj
-c:\users\juji\desktop\whitetail\output\intermediates\hooks.obj
-c:\users\juji\desktop\whitetail\output\intermediates\globals.obj
-c:\users\juji\desktop\whitetail\output\intermediates\staticpropinit.obj
-c:\users\juji\desktop\whitetail\output\intermediates\reset.obj
-c:\users\juji\desktop\whitetail\output\intermediates\dopostscreenspaceeffects.obj
-c:\users\juji\desktop\whitetail\output\intermediates\painttraverse.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_widgets.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_tables.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_shadow.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_impl_win32.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_impl_dx9.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_freetype.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_draw.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui_demo.obj
-c:\users\juji\desktop\whitetail\output\intermediates\imgui.obj
-c:\users\juji\desktop\whitetail\output\intermediates\trampoline.obj
-c:\users\juji\desktop\whitetail\output\intermediates\hook.obj
-c:\users\juji\desktop\whitetail\output\intermediates\hde64.obj
-c:\users\juji\desktop\whitetail\output\intermediates\hde32.obj
-c:\users\juji\desktop\whitetail\output\intermediates\buffer.obj
-c:\users\juji\desktop\whitetail\output\whitetail main.dll
-c:\users\juji\desktop\whitetail\output\intermediates\whitetail main.ipdb
-c:\users\juji\desktop\whitetail\output\intermediates\whitetail main.iobj
-c:\users\juji\desktop\whitetail\output\whitetail main.pdb
-c:\users\juji\desktop\whitetail\output\intermediates\vc143.pdb
-c:\users\juji\desktop\whitetail\output\intermediates\white-ta.badd49d7.tlog\cl.command.1.tlog
-c:\users\juji\desktop\whitetail\output\intermediates\white-ta.badd49d7.tlog\cl.read.1.tlog
-c:\users\juji\desktop\whitetail\output\intermediates\white-ta.badd49d7.tlog\cl.write.1.tlog
-c:\users\juji\desktop\whitetail\output\intermediates\white-ta.badd49d7.tlog\link.command.1.tlog
-c:\users\juji\desktop\whitetail\output\intermediates\white-ta.badd49d7.tlog\link.read.1.tlog
-c:\users\juji\desktop\whitetail\output\intermediates\white-ta.badd49d7.tlog\link.write.1.tlog
+c:\users\lubom\desktop\whitetail old\output\intermediates\vc143.pdb
+c:\users\lubom\desktop\whitetail old\output\intermediates\paint.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\overrideview.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\listleavesinbox.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\levelshutdown.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\levelinitpreentity.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\levelinitpostentity.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\getviewmodelfov.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\getplayermoney.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\framestagenotify.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\endscene.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\drawmodelexecute.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\createmove.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\showalert.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\settingschattext.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\sequence.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\senddatagram.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\onscreensizechanged.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\dispatchusermessage.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\allockeyvaluesmemory.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\etc_elements.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\entity.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\render.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\memory.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\skins.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\events.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\entities.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\config.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\main.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\visuals.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\misc.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\netvar.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\ui.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\nav_elements.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\interfaces.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\hooks.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\globals.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\staticpropinit.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\reset.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\dopostscreenspaceeffects.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\painttraverse.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_widgets.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_tables.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_shadow.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_impl_win32.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_impl_dx9.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_freetype.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_draw.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui_demo.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\imgui.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\trampoline.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\hook.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\hde64.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\hde32.obj
+c:\users\lubom\desktop\whitetail old\output\intermediates\buffer.obj
+c:\users\lubom\desktop\whitetail old\output\whitetail main.dll
+c:\users\lubom\desktop\whitetail old\output\intermediates\whitetail main.ipdb
+c:\users\lubom\desktop\whitetail old\output\intermediates\whitetail main.iobj
+c:\users\lubom\desktop\whitetail old\output\whitetail main.pdb
+c:\users\lubom\desktop\whitetail old\output\intermediates\whitetail.vcxproj.filelistabsolute.txt
+c:\users\lubom\desktop\whitetail old\output\intermediates\white-ta.badd49d7.tlog\cl.command.1.tlog
+c:\users\lubom\desktop\whitetail old\output\intermediates\white-ta.badd49d7.tlog\cl.read.1.tlog
+c:\users\lubom\desktop\whitetail old\output\intermediates\white-ta.badd49d7.tlog\cl.write.1.tlog
+c:\users\lubom\desktop\whitetail old\output\intermediates\white-ta.badd49d7.tlog\link.command.1.tlog
+c:\users\lubom\desktop\whitetail old\output\intermediates\white-ta.badd49d7.tlog\link.read.1.tlog
+c:\users\lubom\desktop\whitetail old\output\intermediates\white-ta.badd49d7.tlog\link.write.1.tlog

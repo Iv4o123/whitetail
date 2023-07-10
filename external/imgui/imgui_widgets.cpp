@@ -1616,10 +1616,13 @@ bool ImGui::BeginCombo(const char* label, const char* preview_value, ImGuiComboF
     const ImGuiStyle& style = g.Style;
     const ImGuiID id = window->GetID(label);
     IM_ASSERT((flags & (ImGuiComboFlags_NoArrowButton | ImGuiComboFlags_NoPreview)) != (ImGuiComboFlags_NoArrowButton | ImGuiComboFlags_NoPreview)); // Can't use both flags together
-    const float size = 190;
+    const float size = GetWindowWidth() - 30;
 
-    const ImRect rect(window->DC.CursorPos, window->DC.CursorPos + ImVec2(size, 44));
-    const ImRect clickable(window->DC.CursorPos + ImVec2(0, 18), window->DC.CursorPos + ImVec2(size, 44));
+    const ImRect rect(window->DC.CursorPos, window->DC.CursorPos + ImVec2(size, 53));
+    const ImRect clickable(window->DC.CursorPos + ImVec2(0, 23), window->DC.CursorPos + ImVec2(size, 53));
+
+    //const ImVec2 arrow_size = combo_arroww->CalcTextSizeA(9.0f, FLT_MAX, 0.0f, ".");
+
     ItemSize(rect, style.FramePadding.y);
     if (!ItemAdd(clickable, id, &rect))
         return false;
@@ -1639,7 +1642,7 @@ bool ImGui::BeginCombo(const char* label, const char* preview_value, ImGuiComboF
     auto it_anim = anim.find(id);
     if (it_anim == anim.end())
     {
-        anim.insert({ id, {0.0f, 0.0f} });
+        anim.insert({ id, { 0.0f, 0.0f } });
         it_anim = anim.find(id);
     }
 
@@ -1648,19 +1651,15 @@ bool ImGui::BeginCombo(const char* label, const char* preview_value, ImGuiComboF
 
     window->DrawList->AddRectFilled(clickable.Min, clickable.Max, ImColor(255,255,255), 3.0f);
     window->DrawList->AddRect(clickable.Min, clickable.Max, ImColor(24,24,24,50), 3.0f);
+    window->DrawList->AddRect(clickable.Min, clickable.Max, ImColor(1.0f, 1.0f, 1.0f, 0.03f), 3.0f);
 
     window->DrawList->AddText(rect.Min, GetColorU32(ImGuiCol_Text), label);
 
-    RenderTextClipped(clickable.Min + ImVec2(8, 5), clickable.Max - ImVec2(24, -45), preview_value, NULL, NULL, ImVec2(0.0f, 0.0f));
+    RenderTextClipped(clickable.Min + ImVec2(14, 7), clickable.Max - ImVec2(24, -47), preview_value, NULL, NULL, ImVec2(0.0f, 0.0f));
 
-    const float arrow_size = GetFrameHeight() + 2;
-    const float value_x2 = ImMax(clickable.Min.x, clickable.Max.x - arrow_size);
-
-    window->DrawList->AddLine(ImVec2(value_x2 + 5, clickable.Min.y + 10), ImVec2(value_x2 + 8, clickable.Min.y + 14), ImColor(1.0f, 1.0f, 1.0f, 0.6f + it_anim->second.arrow_anim));
-    window->DrawList->AddLine(ImVec2(value_x2 + 8, clickable.Min.y + 14), ImVec2(value_x2 + 12, clickable.Min.y + 9), ImColor(1.0f, 1.0f, 1.0f, 0.6f + it_anim->second.arrow_anim));
-
-    window->DrawList->AddLine(ImVec2(value_x2 + 4, clickable.Min.y + 10), ImVec2(value_x2 + 8, clickable.Min.y + 15), ImColor(1.0f, 1.0f, 1.0f, 0.6f + it_anim->second.arrow_anim));
-    window->DrawList->AddLine(ImVec2(value_x2 + 8, clickable.Min.y + 15), ImVec2(value_x2 + 13, clickable.Min.y + 9), ImColor(1.0f, 1.0f, 1.0f, 0.6f + it_anim->second.arrow_anim));
+    //PushFont(combo_arroww); {
+    //    window->DrawList->AddText(ImVec2(clickable.Max.x - 20, (clickable.Min.y + clickable.Max.y) / 2 - arrow_size.y / 2), ImColor(1.0f, 1.0f, 1.0f, 0.2f + it_anim->second.arrow_anim), "A");
+    //} PopFont();
 
     if (!popup_open)
         return false;
@@ -1710,13 +1709,14 @@ bool ImGui::BeginCombo(const char* label, const char* preview_value, ImGuiComboF
 
     // We don't use BeginPopupEx() solely because we have a custom name string, which we could make an argument to BeginPopupEx()
     ImGuiWindowFlags window_flags = ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_Popup | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoMove;
-    PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(8, 10)); // Horizontally align ourselves with the framed text
+    PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(8, 5)); // Horizontally align ourselves with the framed text
     PushStyleVar(ImGuiStyleVar_PopupRounding, 3.0f);
-    PushStyleVar(ImGuiStyleVar_PopupBorderSize, 0.5f);
-    PushStyleColor(ImGuiCol_PopupBg, ImVec4(ImColor(132, 133, 135)));
+    PushStyleVar(ImGuiStyleVar_PopupBorderSize, 2.0f);
+    PushStyleColor(ImGuiCol_Border, ImVec4(1.0f, 1.0f, 1.0f, 0.03f));
+    PushStyleColor(ImGuiCol_PopupBg, ImVec4(ImColor(255,255,255)));
     bool ret = Begin(name, NULL, window_flags | ImGuiWindowFlags_NoScrollbar);
     PopStyleVar(3);
-    PopStyleColor();
+    PopStyleColor(2);
     if (!ret)
     {
         EndPopup();
@@ -1938,6 +1938,7 @@ bool ImGui::Combo(const char* label, int* current_item, const char* items_separa
     bool value_changed = Combo(label, current_item, Items_SingleStringGetter, (void*)items_separated_by_zeros, items_count, height_in_items);
     return value_changed;
 }
+
 //-------------------------------------------------------------------------
 // [SECTION] Data Type and Data Formatting Helpers [Internal]
 //-------------------------------------------------------------------------

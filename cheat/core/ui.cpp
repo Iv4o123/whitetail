@@ -159,7 +159,7 @@ void u::Setup()
 
 	style.Colors[ImGuiCol_Button] = ImColor(31, 31, 31);
 	style.Colors[ImGuiCol_ButtonActive] = ImColor(34, 34, 34);
-	style.Colors[ImGuiCol_ButtonHovered] = ImColor(255,0,0);
+	style.Colors[ImGuiCol_ButtonHovered] = ImColor(34, 34, 34);
 
 
 	//style.Colors[ImGuiCol_Border] = ImColor(245, 245, 245);
@@ -308,50 +308,40 @@ void u::Render()
 	const char* tab_name = tab == Legitbot ? "Legitbot" : tab == Ragebot ? "Ragebot" : tab == Visuals ? "Visuals" : tab == AntiAim ? "Anti-Aim" : tab == Misc ? "Misc" : tab == Pressets ? "Presets" : tab == IChanger ? "Inventory Changer" : 0;
 	//const char* tab_icon = tab == Legitbot ? "A" : tab == Ragebot ? "B" : tab == Visuals ? "C" : tab == AntiAim ? "D" : tab == Misc ? "E" : tab == Pressets ? "F" :  0;
 	//static bool boolean, boolean_1 = false;
-	static int sliderscalar = 60;
-	static bool sideBar = true;
+	//static int sliderscalar = 60;
+	//static bool sideBar = true;
 
-	static bool enableViewModelChams = false;
-	static bool ViewmodelFOV = false;
-	static bool ViewFOV = false;
-	static float animspeed = 0.4f;
-	int selected = 0;
-	bool boolean = false;
+	//static bool enableViewModelChams = false;
+	//static bool ViewmodelFOV = false;
+	//static bool ViewFOV = false;
+	//static float animspeed = 0.4f;
+	//int selected = 0;
+	//bool boolean = false;
 	
 	
 
-	bool RageGeneralEnabled = true;
+	//bool RageGeneralEnabled = true;
 
-	const char* viewmodel_chams[3] = { "Arms", "Sleeves", "Weapon" };
-	static int combo = 0;
-	static int weapon;
+	//const char* viewmodel_chams[3] = { "Arms", "Sleeves", "Weapon" };
+	//static int combo = 0;
+	//static int weapon;
 
 	static bool disabled = true;
 	static bool enable = false;
 
 	
-	open_alpha = ImClamp(open_alpha + (2.f * ImGui::GetIO().DeltaTime * (open ? 1.5f : -1.5f)), 0.f, 1.f);
-	if (open_alpha > 0.01f) {
-		if (open && open_alpha > 0.8f || !open)
-			switch_alpha[0] = ImClamp(switch_alpha[0] + (2.f * ImGui::GetIO().DeltaTime * (open ? 1.f : -5.f)), 0.f, 1.f);
+	
 		ImGui::SetNextWindowSize(ImVec2(806, 666));
-		ImGui::PushStyleVar(ImGuiStyleVar_Alpha, open_alpha);
+		
 		ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 		ImGui::PushFont(medium);
-		ImGui::Begin("Unknown name cheat", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoScrollbar);
-		{
+		ImGui::Begin("Unknown name cheat", &open, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoScrollbar);
+		
 
 			
 			Decoration();
 
-			if (switch_alpha[0] > 0.01f)
-			{
-				if (open && switch_alpha[0] > 0.8f || !open)
-					switch_alpha[1] = ImClamp(switch_alpha[1] + (2.f * ImGui::GetIO().DeltaTime * (open ? 1.f : -5.f)), 0.f, 1.f);
-				ImGui::PushStyleVar(ImGuiStyleVar_Alpha, switch_alpha[0]);
-				ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(5, 5));
-				if (switch_alpha[1] > 0.01f)
-				{
+			
 					
 					//Get Window DRAW, POSITION, SIZE, etc.
 					auto draw = ImGui::GetWindowDrawList();
@@ -378,7 +368,7 @@ void u::Render()
 					draw->AddLine(ImVec2(pos.x, pos.y + 640), ImVec2(pos.x + 803, pos.y + 640), ImColor(21, 112, 232, 50));
                     draw->AddRect(pos + ImVec2(1, 1), pos + size - ImVec2(1, 1), ImColor(1.0f, 1.0f, 1.0f, 0.03f), style.WindowRounding);
 
-					ImGui::AddShadow(ImVec2(9, 9), ImVec2(791, 646), 20, 4, 8, 2, 20, ImColor(21, 112, 232));
+					ImGui::AddShadow(ImVec2(0, 0), ImVec2(800, 655), 20, 4, 7, 2, 20, ImColor(0, 0, 0));
 
 					ImGui::SetCursorPos({ 310, 18 });
 					ImGui::Text("UNDER DEVELOPMENT - UNSTABLE!");
@@ -425,7 +415,7 @@ void u::Render()
 							case Pistols:
 								ImGui::SetCursorPos({ 86, 152 });
 								e_elements::begin_child("Aim Assist", ImVec2(347, 282)); {
-									ImGui::Checkbox("legit test 1", &boolean);
+									//ImGui::Checkbox("legit test 1", &boolean);
 
 									//ImGui::Combo("TEST  COMBO", &combo, viewmodel_chams, IM_ARRAYSIZE(viewmodel_chams));
 								}
@@ -433,7 +423,7 @@ void u::Render()
 
 								ImGui::SetCursorPos({ 443, 152 });
 								e_elements::begin_child("Triggerbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -456,13 +446,13 @@ void u::Render()
 							case SMG:
 								ImGui::SetCursorPos({ 86, 152 });
 								e_elements::begin_child("Aim Assist", ImVec2(347, 282)); {
-									ImGui::Checkbox("legit test 1", &boolean);
+									//ImGui::Checkbox("legit test 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 443, 152 });
 								e_elements::begin_child("Triggerbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -484,13 +474,13 @@ void u::Render()
 							case Rifles:
 								ImGui::SetCursorPos({ 86, 152 });
 								e_elements::begin_child("Aim Assist", ImVec2(347, 282)); {
-									ImGui::Checkbox("legit test 1", &boolean);
+									//ImGui::Checkbox("legit test 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 443, 152 });
 								e_elements::begin_child("Triggerbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -513,13 +503,13 @@ void u::Render()
 							case Shotguns:
 								ImGui::SetCursorPos({ 86, 152 });
 								e_elements::begin_child("Aim Assist", ImVec2(347, 282)); {
-									ImGui::Checkbox("legit test 1", &boolean);
+									//ImGui::Checkbox("legit test 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 443, 152 });
 								e_elements::begin_child("Triggerbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -542,13 +532,13 @@ void u::Render()
 							case Heavy:
 								ImGui::SetCursorPos({ 86, 152 });
 								e_elements::begin_child("Aim Assist", ImVec2(347, 282)); {
-									ImGui::Checkbox("legit test 1", &boolean);
+									//ImGui::Checkbox("legit test 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 443, 152 });
 								e_elements::begin_child("Triggerbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -571,13 +561,13 @@ void u::Render()
 							case Snipers:
 								ImGui::SetCursorPos({ 86, 152 });
 								e_elements::begin_child("Aim Assist", ImVec2(347, 282)); {
-									ImGui::Checkbox("legit test 1", &boolean);
+									//ImGui::Checkbox("legit test 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 443, 152 });
 								e_elements::begin_child("Triggerbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -637,13 +627,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -678,13 +668,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -718,13 +708,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -758,13 +748,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -798,13 +788,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -838,13 +828,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -877,13 +867,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -916,13 +906,13 @@ void u::Render()
 								ImGui::BeginDisabled(disabled);
 								ImGui::SetCursorPos({ 443, 160 });
 								e_elements::begin_child("Accuracy", ImVec2(347, 282)); {
-									ImGui::Checkbox("boolean 1", &boolean);
+									//ImGui::Checkbox("boolean 1", &boolean);
 								}
 								e_elements::end_child();
 
 								ImGui::SetCursorPos({ 86, 160 });
 								e_elements::begin_child("Aimbot", ImVec2(347, 173)); {
-									ImGui::Checkbox("boolean 2", &boolean);
+									//ImGui::Checkbox("boolean 2", &boolean);
 								}
 								e_elements::end_child();
 
@@ -948,13 +938,13 @@ void u::Render()
 						case Visuals:
 
 							ImGui::SetCursorPos({ 102, 62 });
-							ImGui::Checkbox("Enable Visuals", &enable);
+							//ImGui::Checkbox("Enable Visuals", &enable);
 							ImGui::SetCursorPos({ 600, 62 });
 							ImGui::Text("COMBO NEEDS TO BE ADDED!");
 
 							ImGui::SetCursorPos({ 86, 93 });
 							e_elements::begin_child("Overlay", ImVec2(347, 282)); {
-								ImGui::Checkbox("boolean 1", &boolean);
+								//ImGui::Checkbox("boolean 1", &boolean);
 							}
 							e_elements::end_child();
 
@@ -966,7 +956,7 @@ void u::Render()
 
 							ImGui::SetCursorPos({ 443, 342 });
 							e_elements::begin_child("Extra", ImVec2(347, 282)); {
-								ImGui::Checkbox("boolean 1", &boolean);
+								//ImGui::Checkbox("boolean 1", &boolean);
 							}
 							e_elements::end_child();
 
@@ -982,25 +972,25 @@ void u::Render()
 						case IChanger:
 
 							ImGui::SetCursorPos({ 102, 62 });
-							ImGui::Checkbox("Enable Skin Changer", &enable);
+							//ImGui::Checkbox("Enable Skin Changer", &enable);
 							ImGui::SetCursorPos({ 600, 62 });
 							ImGui::Text("COMBO NEEDS TO BE ADDED!");
 
 							ImGui::SetCursorPos({ 443, 93 });
 							e_elements::begin_child("Skin Changer", ImVec2(347, 532)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 86, 93 });
 							e_elements::begin_child("Preview", ImVec2(347, 250)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 86, 359 });
 							e_elements::begin_child("Skin List", ImVec2(347, 266)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
@@ -1009,9 +999,9 @@ void u::Render()
 						case AntiAim:
 
 							ImGui::SetCursorPos({ 102, 62 });
-							ImGui::Checkbox("Enable Anti-Aim", &enable);
-							if (enable == true) { disabled == false; }
-							else { disabled == true; }
+							//ImGui::Checkbox("Enable Anti-Aim", &enable);
+							//if (enable == true) { disabled == false; }
+							//else { disabled == true; }
 
 							ImGui::SetCursorPos({ 600, 62 });
 							ImGui::Text("COMBO NEEDS TO BE ADDED!");
@@ -1020,13 +1010,13 @@ void u::Render()
 							
 							ImGui::SetCursorPos({ 86, 93 });
 							e_elements::begin_child("General", ImVec2(347, 532)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 443, 93 });
 							e_elements::begin_child("Advanced", ImVec2(347, 282)); {
-								ImGui::Checkbox("boolean 1", &boolean);
+								//ImGui::Checkbox("boolean 1", &boolean);
 							}
 							e_elements::end_child();
 
@@ -1046,25 +1036,25 @@ void u::Render()
 
 							ImGui::SetCursorPos({ 86, 63 });
 							e_elements::begin_child("Visual", ImVec2(347, 273)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 86, 352 });
-							e_elements::begin_child("Fakelag", ImVec2(347, 273)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+							e_elements::begin_child("Movement", ImVec2(347, 273)); {
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 443, 63 });
-							e_elements::begin_child("Movement", ImVec2(347, 273)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+							e_elements::begin_child("Fakelag", ImVec2(347, 273)); {
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 443, 352 });
 							e_elements::begin_child("Other", ImVec2(347, 273)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
@@ -1074,20 +1064,14 @@ void u::Render()
 						case Pressets:
 
 							ImGui::SetCursorPos({ 86, 63 });
-							e_elements::begin_child("Manage Configs", ImVec2(347, 273)); {
-								ImGui::Checkbox("legit test 1", &boolean);
-							}
-							e_elements::end_child();
-
-							ImGui::SetCursorPos({ 86, 352 });
-							e_elements::begin_child("Buybot", ImVec2(347, 273)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+							e_elements::begin_child("Manage Scripts", ImVec2(347, 562)); {
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
 							ImGui::SetCursorPos({ 443, 63 });
-							e_elements::begin_child("Manage Scripts", ImVec2(347, 562)); {
-								ImGui::Checkbox("legit test 1", &boolean);
+							e_elements::begin_child("Manage Configs", ImVec2(347, 562)); {
+								//ImGui::Checkbox("legit test 1", &boolean);
 							}
 							e_elements::end_child();
 
@@ -1109,12 +1093,12 @@ void u::Render()
 						ImGui::PopFont();
 						ImGui::PopStyleVar();
 					
-				}
+				
 				ImGui::PopStyleVar(2);
-			}
+			
 			
 
-		}
+		
 		ImGui::End();
 		ImGui::PopStyleVar(2);
 		
@@ -1126,7 +1110,8 @@ void u::Render()
 		
 	}
 	//ImGui::RenderNotifications();
-}
+
+
 
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND window, UINT message, WPARAM wideParam, LPARAM longParam);

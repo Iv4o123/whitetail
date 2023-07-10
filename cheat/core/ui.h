@@ -21,7 +21,7 @@ namespace u
 	inline static int menu_animation = 0;
 	inline static int border_animation = 0;
 	inline static int domenuopen = false;
-	inline bool open = true;
+	inline bool open = false;
 	inline HWND window = nullptr;
 	inline WNDPROC WindowProcessOriginal = nullptr;
 }
