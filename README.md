@@ -6,5 +6,5 @@ New GUI Included!
 
 ## Screenshots
 
-![App Screenshot](https://ibb.co/XkVyxTsJ)
+![App Screenshot](https://i.ibb.co/zHN8VwRf/unknown.png)
 
