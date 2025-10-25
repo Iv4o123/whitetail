@@ -6,4 +6,4 @@ New GUI Included!
 
 ## Screenshots
 
-![App Screenshot](https://i.postimg.cc/gkYXDSYH/unknown.png)
+[![KrQu1P1.md.png](https://iili.io/KrQu1P1.md.png)](https://freeimage.host/i/KrQu1P1)
